@@ -31,7 +31,8 @@
 
 :root {
   --text-color: #333333;
-  --accent-color: #ffffff;
+  --accent-color: #0a775f;
+  --outline-color: #0a775f;
 }
 
 /* GLOBAL STYLES */
@@ -42,6 +43,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+*:focus {
+  outline: 2px dashed var(--outline-color);
+  outline-offset: 3px;
 }
 
 html {
@@ -64,14 +70,96 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* CONTAINER */
 
 .container {
   width: 100%;
-  max-width: 1480px;
+  max-width: 1440px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
 }
 
+/* SITE-HEADER-HERO-CONTAINER */
+
+.site-header-hero-container {
+  background-image: url("/img/hero-bg.jpg");
+}
+
 /* SITE-HEADER */
+
+.site-header {
+  width: 100%;
+  max-width: 1440px;
+  padding: 40px 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.site-header-container {
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header-logo-link:hover {
+  opacity: 0.8;
+}
+
+.site-header-logo-link:active {
+  opacity: 0.6;
+}
+
+.site-header-logo-img {
+  width: 235px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* SITE-HEADER-NAV */
+
+.site-header-nav-list {
+  list-style-type: none;
+  display: flex;
+}
+
+.site-header-nav-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.site-header-nav-link {
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.site-header-nav-link:hover {
+  color: var(--accent-color);
+}
+
+.site-header-nav-link:active {
+  opacity: 0.6;
+}
+
+/* RETINA BACKGROUND */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  .site-header-hero-container {
+    background-image: url("/img/hero-bg@2x.jpg");
+  }
+}
