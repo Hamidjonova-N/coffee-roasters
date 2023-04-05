@@ -31,7 +31,12 @@
 
 :root {
   --text-color: #333333;
-  --accent-color: #0a775f;
+  --accent-color-green: #0a775f;
+  --accent-color-green-hover: rgba(10, 119, 95, 0.8);
+  --accent-color-green-active: rgba(10, 119, 95, 0.6);
+  --accent-color-brown: #c99b67;
+  --accent-color-brown-hover: rgba(201, 155, 103, 0.8);
+  --accent-color-brown-active: rgba(201, 155, 103, 0.6);
   --outline-color: #0a775f;
 }
 
@@ -74,6 +79,48 @@ a {
   text-decoration: none;
 }
 
+.button {
+  width: 193px;
+  height: 51px;
+  display: inline-block;
+  padding: 16px;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.button-green {
+  background-color: var(--accent-color-green);
+  transition: background-color 0.3s ease;
+}
+
+.button-green:hover {
+  background-color: var(--accent-color-green-hover);
+}
+
+.button-green:active {
+  background-color: var(--accent-color-green-active);
+}
+
+.button-brown {
+  background-color: var(--accent-color-brown);
+  transition: background-color 0.3s ease;
+}
+
+.button-brown:hover {
+  background-color: var(--accent-color-brown-hover);
+}
+
+.button-brown:active {
+  background-color: var(--accent-color-brown-active);
+}
+
 /* CONTAINER */
 
 .container {
@@ -87,6 +134,7 @@ a {
 /* SITE-HEADER-HERO-CONTAINER */
 
 .site-header-hero-container {
+  background-color: #f3d7b7;
   background-image: url("/img/hero-bg.jpg");
 }
 
@@ -119,6 +167,7 @@ a {
   width: 235px;
   height: 24px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 /* SITE-HEADER-NAV */
@@ -140,15 +189,51 @@ a {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--text-color);
+  white-space: nowrap;
   transition: color 0.3s ease;
 }
 
 .site-header-nav-link:hover {
-  color: var(--accent-color);
+  color: var(--accent-color-green);
 }
 
 .site-header-nav-link:active {
   opacity: 0.6;
+}
+
+/* HERO */
+
+.hero-container {
+  padding: 0;
+  display: flex;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 730px;
+  padding: 116px 116px 100px 100px;
+}
+
+.hero-heading {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 75px;
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+.hero-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 34px;
+}
+
+.index-hero-img {
+  width: 710px;
+  height: 696px;
+  object-fit: cover;
 }
 
 /* RETINA BACKGROUND */
