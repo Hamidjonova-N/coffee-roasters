@@ -236,6 +236,81 @@ a {
   object-fit: cover;
 }
 
+/* MAIN-CONTENT */
+
+.main-content {
+  padding: 20px 0 50px 0;
+  background-color: #ffffff;
+}
+
+/* INDEX-COLLECTION */
+
+.index-collection {
+  width: 100%;
+  max-width: 1400px;
+  padding: 50px 143px;
+  background-color: #f8f8f2;
+  background-image: url("/img/index-collection-bg.jpg");
+}
+
+.index-collection-heading {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 59px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 80px;
+}
+
+.index-collection-list {
+  width: 100%;
+  max-width: 1114px;
+  list-style-type: none;
+}
+
+.index-collection-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.index-collection-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.index-collection-img {
+  width: 450px;
+  height: 375px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.index-collection-content {
+  flex-grow: 1;
+  padding: 0 117px;
+}
+
+.index-collection-title {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.index-collection-text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  color: var(--text-color);
+}
+
+.index-collection-text:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 /* RETINA BACKGROUND */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -246,5 +321,9 @@ a {
   only screen and (min-resolution: 2dppx) {
   .site-header-hero-container {
     background-image: url("/img/hero-bg@2x.jpg");
+  }
+
+  .index-collection {
+    background-image: url("/img/index-collection-bg@2x.jpg");
   }
 }
